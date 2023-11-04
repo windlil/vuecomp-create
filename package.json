@@ -1,16 +1,28 @@
 {
   "name": "vuecomp-create",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A CLI for vuecomp-starter",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "vuecomp": "esno ./src/index.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "bin": {
+    "vuecomp-create": "./dist/index.cjs"
+  },
+  "keywords": [
+    "CLI"
+  ],
+  "author": "windlil<windlil@outlook.com>",
+  "license": "MIT",
   "devDependencies": {
+    "@types/inquirer": "^9.0.6",
+    "@types/node": "^20.8.10",
+    "chalk": "^5.3.0",
+    "esno": "^0.17.0",
+    "inquirer": "^9.2.11",
     "tsup": "^7.2.0"
   }
 }
